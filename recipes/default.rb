@@ -5,7 +5,7 @@
 # Copyright 2012-2014, Escape Studios
 #
 
-case node['yasm']['install_method']
+case node['yasm']['install_method'].to_sym
 when :source
   include_recipe 'yasm::source'
 when :package
